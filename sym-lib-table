@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name lesto)(type Legacy)(uri /home/mauro/workspaces/kicad/lestoFly/Sensor_Motion_lesto.lib)(options "")(descr ""))
+  (lib (name lesto2)(type Legacy)(uri /home/mauro/workspaces/kicad/lestoFly/RF_Module_lesto.lib)(options "")(descr ""))
+)
