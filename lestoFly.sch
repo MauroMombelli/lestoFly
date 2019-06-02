@@ -36,17 +36,6 @@ F 3 " ~" H 9000 4900 50  0001 C CNN
 	1    9000 4900
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:C C4
-U 1 1 5CFBA42A
-P 2000 1850
-F 0 "C4" H 2115 1896 50  0000 L CNN
-F 1 "10uF" H 2115 1805 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1210_3225Metric" H 2038 1700 50  0001 C CNN
-F 3 "~" H 2000 1850 50  0001 C CNN
-	1    2000 1850
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2000 2000 2000 2300
 Wire Wire Line
@@ -208,8 +197,6 @@ Wire Wire Line
 	3700 1700 3700 1850
 Text GLabel 3300 4900 2    50   Input ~ 0
 MISO
-Text GLabel 3300 5000 2    50   Input ~ 0
-MOSI
 Text GLabel 3300 5100 2    50   Input ~ 0
 CLK
 Wire Wire Line
@@ -812,12 +799,6 @@ Wire Wire Line
 Wire Wire Line
 	1300 2300 2000 2300
 Wire Wire Line
-	3000 5200 3600 5200
-Wire Wire Line
-	3600 5200 3600 5000
-Wire Wire Line
-	3600 5000 4100 5000
-Wire Wire Line
 	3000 4700 3850 4700
 Wire Wire Line
 	3850 4700 3850 5100
@@ -860,4 +841,17 @@ F 3 "~" H 4300 5600 50  0001 C CNN
 $EndComp
 Text GLabel 3300 6000 2    50   Output ~ 0
 CS_IMU
+$Comp
+L Device:C C4
+U 1 1 5CFBA42A
+P 2000 1850
+F 0 "C4" H 2115 1896 50  0000 L CNN
+F 1 "10uF" H 2115 1805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric" H 2038 1700 50  0001 C CNN
+F 3 "~" H 2000 1850 50  0001 C CNN
+	1    2000 1850
+	1    0    0    -1  
+$EndComp
+Text GLabel 3300 5000 2    50   Input ~ 0
+MOSI
 $EndSCHEMATC
