@@ -26,8 +26,6 @@ F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BMP280-D
 $EndComp
 Wire Wire Line
 	2000 2000 2000 2300
-Wire Wire Line
-	3550 1900 3550 1700
 $Comp
 L power:GND #PWR0101
 U 1 1 5CFBBF8F
@@ -52,8 +50,6 @@ F 3 "~" H 900 1700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 2000 2300
-Wire Wire Line
-	2550 1900 2550 2100
 $Comp
 L power:GND #PWR0103
 U 1 1 5CFD60A5
@@ -108,17 +104,6 @@ $EndComp
 Wire Wire Line
 	3700 2150 3700 2300
 $Comp
-L Device:C C5
-U 1 1 5CFB7A22
-P 3700 2000
-F 0 "C5" H 3815 2046 50  0000 L CNN
-F 1 "33uF" H 3815 1955 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 3738 1850 50  0001 C CNN
-F 3 "~" H 3700 2000 50  0001 C CNN
-	1    3700 2000
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+3.3V #PWR0108
 U 1 1 5CFDD74B
 P 4200 1700
@@ -171,11 +156,9 @@ Wire Wire Line
 Wire Wire Line
 	3000 6100 3300 6100
 Text GLabel 3300 6500 2    50   Input ~ 0
-INT_IMU
+INT_IMU_1
 Text GLabel 8900 3550 2    50   Output ~ 0
-INT_IMU
-Wire Wire Line
-	8900 3550 8700 3550
+INT_IMU_2
 Wire Wire Line
 	3300 6500 3000 6500
 $Comp
@@ -209,10 +192,10 @@ Wire Wire Line
 Wire Wire Line
 	2450 7000 2450 6900
 $Comp
-L Device:C C7
+L Device:C C11
 U 1 1 5D049010
 P 9650 3600
-F 0 "C7" H 9765 3646 50  0000 L CNN
+F 0 "C11" H 9765 3646 50  0000 L CNN
 F 1 "100nF" H 9765 3555 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 9688 3450 50  0001 C CNN
 F 3 "~" H 9650 3600 50  0001 C CNN
@@ -220,10 +203,10 @@ F 3 "~" H 9650 3600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C10
+L Device:C C12
 U 1 1 5D04A88B
 P 10150 3600
-F 0 "C10" H 10265 3646 50  0000 L CNN
+F 0 "C12" H 10265 3646 50  0000 L CNN
 F 1 "100nF" H 10265 3555 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 10188 3450 50  0001 C CNN
 F 3 "~" H 10150 3600 50  0001 C CNN
@@ -263,10 +246,10 @@ Wire Wire Line
 	9900 3750 9650 3750
 Connection ~ 9900 3750
 $Comp
-L Device:C C6
+L Device:C C7
 U 1 1 5D063A44
 P 9650 1100
-F 0 "C6" H 9765 1146 50  0000 L CNN
+F 0 "C7" H 9765 1146 50  0000 L CNN
 F 1 "100nF" H 9765 1055 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 9688 950 50  0001 C CNN
 F 3 "~" H 9650 1100 50  0001 C CNN
@@ -274,10 +257,10 @@ F 3 "~" H 9650 1100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C9
+L Device:C C8
 U 1 1 5D063A4A
 P 10150 1100
-F 0 "C9" H 10265 1146 50  0000 L CNN
+F 0 "C8" H 10265 1146 50  0000 L CNN
 F 1 "100nF" H 10265 1055 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 10188 950 50  0001 C CNN
 F 3 "~" H 10150 1100 50  0001 C CNN
@@ -343,10 +326,10 @@ F 3 "~" H 1350 4000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C2
+L Device:C C13
 U 1 1 5D0C2573
 P 1350 4550
-F 0 "C2" H 1465 4596 50  0000 L CNN
+F 0 "C13" H 1465 4596 50  0000 L CNN
 F 1 "100nF" H 1465 4505 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 1388 4400 50  0001 C CNN
 F 3 "~" H 1350 4550 50  0001 C CNN
@@ -380,10 +363,10 @@ Wire Wire Line
 Wire Wire Line
 	1350 4700 1350 4950
 $Comp
-L Device:C C3
+L Device:C C2
 U 1 1 5D0F1722
 P 1350 6600
-F 0 "C3" H 1465 6646 50  0000 L CNN
+F 0 "C2" H 1465 6646 50  0000 L CNN
 F 1 "10uF" H 1465 6555 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 1388 6450 50  0001 C CNN
 F 3 "~" H 1350 6600 50  0001 C CNN
@@ -471,17 +454,6 @@ Wire Wire Line
 	1300 2300 1550 2300
 Text GLabel 3300 6000 2    50   Output ~ 0
 CS_IMU_1
-$Comp
-L Device:C C4
-U 1 1 5CFBA42A
-P 2000 1850
-F 0 "C4" H 2115 1896 50  0000 L CNN
-F 1 "10uF" H 2115 1805 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1210_3225Metric" H 2038 1700 50  0001 C CNN
-F 3 "~" H 2000 1850 50  0001 C CNN
-	1    2000 1850
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3000 5100 3300 5100
 Text GLabel 3300 5500 2    50   Input ~ 0
@@ -497,84 +469,34 @@ MISO
 $Comp
 L power:GND #PWR0120
 U 1 1 5D08AAD4
-P 5050 6450
-F 0 "#PWR0120" H 5050 6200 50  0001 C CNN
-F 1 "GND" V 5055 6277 50  0000 C CNN
-F 2 "" H 5050 6450 50  0001 C CNN
-F 3 "" H 5050 6450 50  0001 C CNN
-	1    5050 6450
+P 5050 6250
+F 0 "#PWR0120" H 5050 6000 50  0001 C CNN
+F 1 "GND" V 5055 6077 50  0000 C CNN
+F 2 "" H 5050 6250 50  0001 C CNN
+F 3 "" H 5050 6250 50  0001 C CNN
+	1    5050 6250
 	0    1    1    0   
 $EndComp
 Text GLabel 5100 6650 0    50   UnSpc ~ 0
 1
 Text GLabel 5100 6550 0    50   UnSpc ~ 0
 2
-Text GLabel 5100 5250 0    50   UnSpc ~ 0
-15
-Text GLabel 5100 5350 0    50   UnSpc ~ 0
-14
-Text GLabel 5100 5450 0    50   UnSpc ~ 0
-13
-Text GLabel 5100 5550 0    50   UnSpc ~ 0
-12
-Text GLabel 5100 5650 0    50   UnSpc ~ 0
-11
-Text GLabel 5100 5750 0    50   UnSpc ~ 0
-10
-Text GLabel 5100 5850 0    50   UnSpc ~ 0
-9
-Text GLabel 5100 5950 0    50   UnSpc ~ 0
-8
-Text GLabel 5100 6050 0    50   UnSpc ~ 0
+Text GLabel 5050 5950 0    50   UnSpc ~ 0
 7
-Text GLabel 5100 6150 0    50   UnSpc ~ 0
+Text GLabel 5050 6050 0    50   UnSpc ~ 0
 6
-Text GLabel 5100 6250 0    50   UnSpc ~ 0
+Text GLabel 5050 6150 0    50   UnSpc ~ 0
 5
-$Comp
-L power:+3.3V #PWR0119
-U 1 1 5D087C67
-P 5100 6350
-F 0 "#PWR0119" H 5100 6200 50  0001 C CNN
-F 1 "+3.3V" V 5115 6523 50  0000 C CNN
-F 2 "" H 5100 6350 50  0001 C CNN
-F 3 "" H 5100 6350 50  0001 C CNN
-	1    5100 6350
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	5050 6450 5100 6450
 Wire Wire Line
 	7950 4200 8050 4200
 Wire Wire Line
 	8050 4200 8150 4200
 Connection ~ 8050 4200
 Connection ~ 8150 4200
-Connection ~ 3050 2300
-Connection ~ 3550 1700
 Wire Wire Line
 	2000 2300 2250 2300
 Wire Wire Line
-	3550 1700 3700 1700
-Wire Wire Line
-	3050 2300 3700 2300
-$Comp
-L Regulator_Switching:LMZM23601V3 U2
-U 1 1 5CFA6960
-P 3050 1900
-F 0 "U2" H 2700 2350 50  0000 C CNN
-F 1 "LMZM23601V3" H 2900 2250 50  0000 C CNN
-F 2 "Package_LGA:Texas_SIL0010A_MicroSiP-10-1EP_3.8x3mm_P0.6mm_EP0.7x2.9mm_ThermalVias" H 3050 1050 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lmzm23601.pdf" H 3050 1150 50  0001 C CNN
-	1    3050 1900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
 	2000 1700 2250 1700
-Wire Wire Line
-	2550 1900 2550 1700
-Connection ~ 2550 1900
-Connection ~ 2550 1700
 NoConn ~ 8700 3650
 NoConn ~ 3550 2100
 NoConn ~ 1800 4500
@@ -680,32 +602,17 @@ Wire Wire Line
 	2250 1650 2250 1700
 Connection ~ 2250 1700
 Wire Wire Line
-	2250 1700 2550 1700
-Wire Wire Line
 	1100 1700 1350 1700
-Wire Wire Line
-	2250 2300 3050 2300
 $Comp
 L Graphic:Logo_Open_Hardware_Large #LOGO1
 U 1 1 5D2AB70A
 P 10750 6000
 F 0 "#LOGO1" H 10750 6500 50  0001 C CNN
 F 1 "Logo_Open_Hardware_Large" H 10750 5600 50  0001 C CNN
-F 2 "" H 10750 6000 50  0001 C CNN
+F 2 "lestoFly:oshw_2.0x1" H 10750 6000 50  0001 C CNN
 F 3 "~" H 10750 6000 50  0001 C CNN
 	1    10750 6000
 	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x15_Male J2
-U 1 1 5D2C2F51
-P 5300 5950
-F 0 "J2" H 5250 5850 50  0000 R CNN
-F 1 "Conn_01x15_Male" H 5250 5950 50  0000 R CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x15_P1.00mm_Vertical" H 5300 5950 50  0001 C CNN
-F 3 "~" H 5300 5950 50  0001 C CNN
-	1    5300 5950
-	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR0130
@@ -748,14 +655,14 @@ CS_IMU_1
 Wire Wire Line
 	7200 2400 7500 2400
 Text GLabel 8900 2200 2    50   Output ~ 0
-INT_IMU
+INT_IMU_1
 Wire Wire Line
 	8900 2200 8700 2200
 $Comp
-L Device:C C11
+L Device:C C9
 U 1 1 5E5534C7
 P 9650 2250
-F 0 "C11" H 9765 2296 50  0000 L CNN
+F 0 "C9" H 9765 2296 50  0000 L CNN
 F 1 "100nF" H 9765 2205 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 9688 2100 50  0001 C CNN
 F 3 "~" H 9650 2250 50  0001 C CNN
@@ -763,10 +670,10 @@ F 3 "~" H 9650 2250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C12
+L Device:C C10
 U 1 1 5E5534CD
 P 10150 2250
-F 0 "C12" H 10265 2296 50  0000 L CNN
+F 0 "C10" H 10265 2296 50  0000 L CNN
 F 1 "100nF" H 10265 2205 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 10188 2100 50  0001 C CNN
 F 3 "~" H 10150 2250 50  0001 C CNN
@@ -832,10 +739,10 @@ NoConn ~ 8700 2300
 Wire Notes Line
 	5700 1600 10150 1600
 $Comp
-L Connector:Micro_SD_Card_Det J3
+L Connector:Micro_SD_Card_Det J5
 U 1 1 5E56A349
 P 8300 5450
-F 0 "J3" H 8250 6300 50  0000 C CNN
+F 0 "J5" H 8250 6300 50  0000 C CNN
 F 1 "Micro_SD_Card_Det" H 8250 6200 50  0000 C CNN
 F 2 "Connector_Card:microSD_HC_Hirose_DM3D-SF" H 10350 6150 50  0001 C CNN
 F 3 "https://www.hirose.com/product/en/download_file/key_name/DM3/category/Catalog/doc_file_id/49662/?file_category_id=4&item_id=195&is_series=1" H 8300 5550 50  0001 C CNN
@@ -927,24 +834,22 @@ F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32d
 	1    2400 5500
 	1    0    0    -1  
 $EndComp
-Text GLabel 3300 4400 2    50   UnSpc ~ 0
+Text GLabel 3300 5800 2    50   UnSpc ~ 0
 1
-Text GLabel 3300 4600 2    50   UnSpc ~ 0
+Text GLabel 3300 4400 2    50   UnSpc ~ 0
 2
 Text GLabel 3300 4800 2    50   UnSpc ~ 0
 5
-Text GLabel 3300 5300 2    50   UnSpc ~ 0
-7
 Text GLabel 3300 5400 2    50   UnSpc ~ 0
 6
 Text GLabel 3300 5700 2    50   UnSpc ~ 0
 4
-Text GLabel 3300 5800 2    50   UnSpc ~ 0
+Text GLabel 3300 4600 2    50   UnSpc ~ 0
 3
 Text GLabel 3300 6300 2    50   Output ~ 0
 CS_IMU_2
 Text GLabel 3300 4300 2    50   UnSpc ~ 0
-8
+7
 Wire Wire Line
 	3000 4400 3300 4400
 Wire Wire Line
@@ -952,13 +857,7 @@ Wire Wire Line
 Wire Wire Line
 	3000 4300 3300 4300
 Wire Wire Line
-	3000 5300 3300 5300
-Wire Wire Line
 	3000 5400 3300 5400
-Wire Wire Line
-	3000 5700 3300 5700
-Wire Wire Line
-	3000 5800 3300 5800
 Wire Wire Line
 	3000 6300 3300 6300
 Wire Wire Line
@@ -1009,6 +908,170 @@ F 3 "" H 9250 5950 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9250 5950 9100 5950
-NoConn ~ 3000 6400
 NoConn ~ 3000 6200
+$Comp
+L Connector:Conn_01x04_Male J3
+U 1 1 5E67D064
+P 5400 6550
+F 0 "J3" H 5350 6400 50  0000 R CNN
+F 1 "Conn_01x04_Male" H 5350 6500 50  0000 R CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x04_P1.00mm_Vertical" H 5400 6550 50  0001 C CNN
+F 3 "~" H 5400 6550 50  0001 C CNN
+	1    5400 6550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x04_Male J4
+U 1 1 5E684237
+P 5400 6150
+F 0 "J4" H 5350 6000 50  0000 R CNN
+F 1 "Conn_01x04_Male" H 5350 6100 50  0000 R CNN
+F 2 "lestoFly:PinHeader_1x04_P1.00mm_Vertical_small" H 5400 6150 50  0001 C CNN
+F 3 "~" H 5400 6150 50  0001 C CNN
+	1    5400 6150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5100 6650 5200 6650
+Wire Wire Line
+	5200 6550 5100 6550
+Wire Wire Line
+	5050 5950 5200 5950
+Wire Wire Line
+	5200 6350 5100 6350
+$Comp
+L Device:C C6
+U 1 1 5E5FC0A6
+P 6700 5400
+F 0 "C6" H 6815 5446 50  0000 L CNN
+F 1 "10uF" H 6815 5355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6738 5250 50  0001 C CNN
+F 3 "~" H 6700 5400 50  0001 C CNN
+	1    6700 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0109
+U 1 1 5E5FC0AC
+P 6700 5250
+F 0 "#PWR0109" H 6700 5100 50  0001 C CNN
+F 1 "+3.3V" V 6715 5423 50  0000 C CNN
+F 2 "" H 6700 5250 50  0001 C CNN
+F 3 "" H 6700 5250 50  0001 C CNN
+	1    6700 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 5E5FC0B2
+P 6700 5550
+F 0 "#PWR0110" H 6700 5300 50  0001 C CNN
+F 1 "GND" V 6705 5377 50  0000 C CNN
+F 2 "" H 6700 5550 50  0001 C CNN
+F 3 "" H 6700 5550 50  0001 C CNN
+	1    6700 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C5
+U 1 1 5E5FC0B8
+P 6200 5400
+F 0 "C5" H 6315 5446 50  0000 L CNN
+F 1 "100nF" H 6315 5355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6238 5250 50  0001 C CNN
+F 3 "~" H 6200 5400 50  0001 C CNN
+	1    6200 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0117
+U 1 1 5E5FC0BE
+P 6200 5250
+F 0 "#PWR0117" H 6200 5100 50  0001 C CNN
+F 1 "+3.3V" V 6215 5423 50  0000 C CNN
+F 2 "" H 6200 5250 50  0001 C CNN
+F 3 "" H 6200 5250 50  0001 C CNN
+	1    6200 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0118
+U 1 1 5E5FC0C4
+P 6200 5550
+F 0 "#PWR0118" H 6200 5300 50  0001 C CNN
+F 1 "GND" V 6205 5377 50  0000 C CNN
+F 2 "" H 6200 5550 50  0001 C CNN
+F 3 "" H 6200 5550 50  0001 C CNN
+	1    6200 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 5700 3300 5700
+Wire Wire Line
+	3000 5800 3300 5800
+Text GLabel 5100 6350 0    50   UnSpc ~ 0
+4
+Text GLabel 5100 6450 0    50   UnSpc ~ 0
+3
+Wire Wire Line
+	5200 6450 5100 6450
+NoConn ~ 7400 5850
+NoConn ~ 7400 5950
+Wire Wire Line
+	8900 3550 8700 3550
+Text GLabel 3300 5300 2    50   Input ~ 0
+INT_IMU_2
+Wire Wire Line
+	3300 5300 3000 5300
+NoConn ~ 3000 6400
+$Comp
+L Device:C C3
+U 1 1 5CFBA42A
+P 2000 1850
+F 0 "C3" H 2115 1896 50  0000 L CNN
+F 1 "0.1uF" H 2115 1805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric" H 2038 1700 50  0001 C CNN
+F 3 "~" H 2000 1850 50  0001 C CNN
+	1    2000 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 5CFB7A22
+P 3700 2000
+F 0 "C4" H 3815 2046 50  0000 L CNN
+F 1 "0.1uF" H 3815 1955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3738 1850 50  0001 C CNN
+F 3 "~" H 3700 2000 50  0001 C CNN
+	1    3700 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:LM3480-3.3 U2
+U 1 1 5EBD213D
+P 3000 1700
+F 0 "U2" H 3000 2000 50  0000 C CNN
+F 1 "LM3480-3.3" H 3000 1900 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3000 1925 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/lm3480.pdf" H 3000 1700 50  0001 C CNN
+	1    3000 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 2300 3000 2300
+Wire Wire Line
+	2250 1700 2700 1700
+Wire Wire Line
+	3000 2000 3000 2300
+Connection ~ 3000 2300
+Wire Wire Line
+	3000 2300 3700 2300
+Wire Wire Line
+	3300 1700 3700 1700
+Wire Wire Line
+	5050 6250 5200 6250
+Wire Wire Line
+	5050 6150 5200 6150
+Wire Wire Line
+	5050 6050 5200 6050
 $EndSCHEMATC
